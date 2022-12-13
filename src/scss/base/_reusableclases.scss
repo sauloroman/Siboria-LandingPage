@@ -1,0 +1,78 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.container {
+  width: 120rem;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.text-center {
+  align-items: center;
+}
+
+.text-white {
+  color: v.$color-white;
+}
+
+.section {
+  padding-bottom: calc( v.$general-gap * 2.5 );
+}
+
+.main__title,
+.section__title {
+  color: v.$color-title-1;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.main__title {
+  font-size: 4.4rem;
+  margin-bottom: 4rem;
+  span {
+    color: v.$color-title-2;
+  }
+
+  @include m.landscapeTablet {
+    font-size: 3.2rem;
+  }
+}
+
+.section__title {
+  font-size: 3.2rem;
+  margin-bottom: 1.6rem;
+  display: flex;  
+  align-items: center;
+  gap: 2rem;
+
+  span {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: v.$color-orange;
+  }
+
+  @include m.landscapeTablet {
+    font-size: 2.4rem;
+  }
+
+}
+
+.section__description {
+  color: v.$color-text-2;
+}
+
+.overlay {
+  transition: .3s;
+}
+
+.overlay-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba( 0, 0, 0, 0.4);
+}

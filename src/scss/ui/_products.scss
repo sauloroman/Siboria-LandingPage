@@ -1,0 +1,118 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.products {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6.4rem;
+
+    @include m.landscapeTablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    &-text {
+      @include m.landscapeTablet {
+        margin-bottom: 3.2rem;
+      }
+    }
+    
+    &-buttons {
+      display: flex;
+      gap: 3.2rem;
+      align-self: center;
+    }
+
+    &-button {
+      cursor: pointer;
+      font-size: 2rem;
+      border: 1px solid v.$color-text-9;
+      color: v.$color-blue-1;
+      padding: 1rem;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .3s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+      &:hover {
+        background-color: v.$color-orange;
+        color: v.$color-white;
+      }
+
+    }
+
+  }
+
+  &__card {
+    padding: 1rem;
+    border: 1px solid v.$color-text-9;
+    border-radius: 12px;
+
+    &-content {
+      margin-top: 1.6rem;
+    }
+
+    &-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    &-year {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: v.$color-text-7;
+      margin-bottom: 3rem;
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    &-price {
+      font-size: 2rem;
+      font-weight: 600;
+
+      @include m.landscapeTablet {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-button {
+      @include m.disabledButton( v.$color-outline-2 );
+      padding: .75rem 1rem;
+    }
+
+    &-extra {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-bids,
+    &-bidding {
+      font-size: 1.2rem;
+    }
+    
+    &-bids {
+      font-weight: 600;
+      color: v.$color-title-1;
+    }
+
+    &-bidding {
+      font-weight: 300;
+      color: v.$color-text-2;
+    }
+
+  }
+
+}

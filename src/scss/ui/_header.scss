@@ -1,0 +1,55 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+
+  transition: all .3s ease;
+
+  &__container {
+    height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name {
+
+    font-weight: 600;
+    font-size: 2.4rem;
+
+    span {
+      color: v.$color-orange;
+    }
+  }
+
+  &__button {
+    @include m.fullButton( v.$color-orange, v.$color-white);
+  
+    @include m.landscapeTablet {
+      display: none;
+    }
+  }
+
+  &__menuButtonOpen {
+    display: none;
+    font-size: 4rem;
+    color: v.$color-blue-1;
+
+    @include m.landscapeTablet {
+      display: block;
+    }
+  }
+
+  &__menuButtonClose {
+    display: none;
+    font-size: 5rem;
+    color: v.$color-blue-1;
+    cursor: pointer;
+
+    @include m.landscapeTablet {
+      display: block;
+    }
+  }
+
+}
+

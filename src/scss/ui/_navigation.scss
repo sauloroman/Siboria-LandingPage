@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navigation {
+
+  @include m.landscapeTablet {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    background-color: #fff;
+    padding: 3rem;
+    box-shadow: 0 5px 15px rgba( 0, 0, 0, 0.1);
+    z-index: 100;
+    transform: translate(100%);
+    transition: all .3s ease;
+  }
+
+  @include m.phone {
+    width: 60%;
+  }
+
+  &__header {
+    display: none;
+
+    @include m.landscapeTablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5rem;
+      border-bottom: 1px solid v.$color-text-9;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 3.2rem;  
+
+    @include m.landscapeTablet {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    color: v.$color-text-1;
+    transition: .3s;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      color: v.$color-title-1;
+      border-bottom: 2px solid v.$color-orange;
+    }
+
+    @include m.landscapeTablet {
+      font-size: 1.8rem;
+    }
+
+  }
+
+}
+
+// TO SHOW THE MOBILE MENU
+.showMenu .navigation {
+  transform: translate(0%);
+}

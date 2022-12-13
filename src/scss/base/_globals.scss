@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  @include m.landscapeTablet {
+    font-size: 56.25%;
+  }
+
+  @include m.tablet {
+    font-size: 50%;
+  }
+
+}
+
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-family: v.$main-font;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+select, input {
+  font-family: inherit;
+  font-size: inherit;
+  background: none;
+  border: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+// FOR SWIPER CLASS
+.swiper-slide {
+  width: 30rem !important;
+
+  @include m.landscapeTablet {
+    width: 25rem !important;
+  }
+
+}

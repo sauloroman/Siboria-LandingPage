@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siboria</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./build/css/main.css" />
+
+    <!-- BOXICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header container">
+      <div class="header__container">
+        <div class="header__name">Siboria<span>.</span></div>
+
+        <nav class="navigation">
+          <header class="navigation__header">
+            <div class="header__name">Siboria<span>.</span></div>
+            <i class='bx bx-x header__menuButtonClose'></i>
+          </header>
+
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#home" class="navigation__link">Home</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#products" class="navigation__link">Products</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#categories" class="navigation__link">Categories</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#testimonials" class="navigation__link">Testimonials</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#newsletter" class="navigation__link">NewsLetter</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="header__button">Our Collections</button>
+
+        <button class="header__menuButtonOpen">
+          <i class='bx bx-menu'></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="hero__container container">
+        <div class="hero__text">
+          <h1 class="main__title">
+            World's Biggest
+            <span>Antique Collection</span>
+          </h1>
+
+          <div class="hero__description">
+            From they fine john he give of rich he. They age and draw mrs like.
+            Improving end distrusts may instantly was household applauded
+            incommode.
+          </div>
+
+          <div class="hero__buttons">
+            <button class="hero__button">Discover Now</button>
+            <button class="hero__watch">
+              <i class="bx bxs-right-arrow"></i>
+              Watch Video
+            </button>
+          </div>
+        </div>
+
+        <picture class="hero__imgBox">
+          <source
+            srcset="./build/assets/img/hero-image.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="./build/assets/img/hero-image.avif"
+            type="image/avif"
+          />
+          <img
+            src="./build/assets/img/hero-image.png"
+            type="image/png"
+            loading="lazy"
+            class="hero__img"
+          />
+        </picture>
+
+        <ul class="hero__countdown">
+          <li class="hero__countdown-item">
+            <i class="bx bxs-face hero__countdown-icon"></i>
+            <div class="hero__countdown-text">
+              <p class="hero__countdown-title">1322</p>
+              <p class="hero__countdown-label">Year</p>
+            </div>
+          </li>
+          <li class="hero__countdown-item">
+            <i class="bx bxs-trophy hero__countdown-icon"></i>
+            <div class="hero__countdown-text">
+              <p class="hero__countdown-title">29</p>
+              <p class="hero__countdown-label">Birds so far</p>
+            </div>
+          </li>
+          <li class="hero__countdown-item">
+            <i class="bx bxs-building-house hero__countdown-icon"></i>
+            <div class="hero__countdown-text">
+              <p class="hero__countdown-title">China</p>
+              <p class="hero__countdown-label">Origin</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <section class="search section">
+      <form class="search__container container">
+        <div class="search__field">
+          <label class="search__title">Location</label>
+          <select class="search__select" name="location" id="location">
+            <option value="MX" selected>México</option>
+            <option value="NO">Norway</option>
+            <option value="CA">Canada</option>
+            <option value="CO">Colombia</option>
+          </select>
+        </div>
+
+        <div class="search__field">
+          <label class="search__title">Religion</label>
+          <select class="search__select" name="religion" id="religion">
+            <option value="MX" selected>Asatro</option>
+            <option value="NO">Catholic</option>
+            <option value="CA">Budism</option>
+          </select>
+        </div>
+
+        <div class="search__field">
+          <label class="search__title">Year</label>
+          <select class="search__select" name="year" id="year">
+            <option value="2022" selected>2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+          </select>
+        </div>
+
+        <div class="search__field">
+          <label class="search__title">Type</label>
+          <select class="search__select" name="type" id="type">
+            <option value="Weapons" selected>Weapons</option>
+            <option value="Pictures">Pictures</option>
+            <option value="Plates">Plates</option>
+            <option value="Machines">Machines</option>
+          </select>
+        </div>
+
+        <button class="search__button">
+          <i class="bx bx-search"></i>
+          Search
+        </button>
+      </form>
+    </section>
+
+    <main class="container">
+
+      <!-- PRODUCTS -->
+      <section class="products section" id="products">
+        <div class="swiper products__container">
+          <header class="products__header">
+            <div class="products__header-text">
+              <h2 class="section__title"><span></span> Recently Added</h2>
+              <p class="section__description">
+                Not thoughts all exercise blessing. Indulgence way everything joy
+                alteration boisterous the attachment.
+              </p>
+            </div>
+            <div class="products__header-buttons">
+              <div class="products__header-button buttonLeft">
+                <i class='bx bx-left-arrow-alt' ></i>
+              </div> 
+              <div class="products__header-button buttonRight">
+                <i class='bx bx-right-arrow-alt' ></i>
+              </div> 
+            </div>
+          </header>
+          <div class="swiper-wrapper products__list">
+
+            <div class="products__card swiper-slide">
+              <picture class="products__card-imageBox">
+                <source srcset='./build/assets/img/swiper-image1.webp' type='image/webp' />
+                <source srcset='./build/assets/img/swiper-image1.avif' type='image/avif' />
+                <img src='./build/assets/img/swiper-image1.png' type='image/png' loading='lazy' />
+              </picture>
+
+              <div class="products__card-content">
+                <p class="products__card-title">Yet bed any for travelling </p>
+                <p class="products__card-year">Year 1192 | Weapons</p>
+                <div class="products__card-info">
+                  <p class="products__card-price">$895.50</p>
+                  <button class="products__card-button">View Details</button>
+                </div>
+                <div class="products__card-extra">
+                  <p class="products__card-bids">14 bids so far</p>
+                  <p class="products__card-bidding">Bidding Closes in 12 Days</p>
+                </div>
+              </div>
+            </div> <!-- .product__card -->
+
+            <div class="products__card swiper-slide">
+              <picture class="products__card-imageBox">
+                <source srcset='./build/assets/img/swiper-image2.webp' type='image/webp' />
+                <source srcset='./build/assets/img/swiper-image2.avif' type='image/avif' />
+                <img src='./build/assets/img/swiper-image2.png' type='image/png' loading='lazy' />
+              </picture>
+
+              <div class="products__card-content">
+                <p class="products__card-title">Indulgence unpleasing</p>
+                <p class="products__card-year">Year 1012 | Tools</p>
+                <div class="products__card-info">
+                  <p class="products__card-price">$769.99</p>
+                  <button class="products__card-button">View Details</button>
+                </div>
+                <div class="products__card-extra">
+                  <p class="products__card-bids">32 bids so far</p>
+                  <p class="products__card-bidding">Bidding Closes in 12 Days</p>
+                </div>
+              </div>
+            </div> <!-- .product__card -->
+
+            <div class="products__card swiper-slide">
+              <picture class="products__card-imageBox">
+                <source srcset='./build/assets/img/swiper-image3.webp' type='image/webp' />
+                <source srcset='./build/assets/img/swiper-image3.avif' type='image/avif' />
+                <img src='./build/assets/img/swiper-image3.png' type='image/png' loading='lazy' />
+              </picture>
+
+              <div class="products__card-content">
+                <p class="products__card-title">Assistance</p>
+                <p class="products__card-year">Year 950 | Tools</p>
+                <div class="products__card-info">
+                  <p class="products__card-price">$939.80</p>
+                  <button class="products__card-button">View Details</button>
+                </div>
+                <div class="products__card-extra">
+                  <p class="products__card-bids">154 bids so far</p>
+                  <p class="products__card-bidding">Bidding Closes in 12 Days</p>
+                </div>
+              </div>
+            </div> <!-- .product__card -->
+
+          </div>
+        </div>
+      </section>
+
+      <!--  GALLERY -->
+      <section class="gallery section" id="categories">
+        <div class="gallery__container">
+          <header class="gallery__header">
+            <h2 class="section__title"><span></span> Top Categories</h2>
+            <p class="section__description">
+              Party we years to order allow asked of. We so opinion friends me message as delight.
+            </p>
+          </header>
+
+          <div class="gallery__grid">
+            <div class="gallery__item">
+              <p class="gallery__item-number">122</p>
+              <div class="gallery__item-name">
+                <h3>Weapons</h3>
+                <p>Worefall</p>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <p class="gallery__item-number">35</p>
+              <div class="gallery__item-name">
+                <h3>Statues</h3>
+                <p>Worefall</p>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <p class="gallery__item-number">71</p>
+              <div class="gallery__item-name">
+                <h3>Skulls</h3>
+                <p>Worefall</p>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <p class="gallery__item-number">98</p>
+              <div class="gallery__item-name">
+                <h3>Watches</h3>
+                <p>Worefall</p>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <p class="gallery__item-number">812</p>
+              <div class="gallery__item-name">
+                <h3>Furniture</h3>
+                <p>Worefall</p>
+              </div>
+            </div>
+
+            <div class="gallery__item">
+              <p class="gallery__item-number">413</p>
+              <div class="gallery__item-name">
+                <h3>Keep</h3>
+                <p>Worefall</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testimonials section" id="testimonials">
+        <div class="testimonials__container">
+          <picture class="testimonials__imageBox">
+            <source srcset='./build/assets/img/testimonial-image.webp' type='image/webp' />
+            <source srcset='./build/assets/img/testimonial-image.avif' type='image/avif' />
+            <img 
+              src='./build/assets/img/testimonial-image.png' 
+              type='image/png' 
+              loading='lazy' 
+              class="testimonials__image"
+            />
+          </picture>
+
+          <div class="testimonials__content">
+            <h2 class="testimonials__title">
+              Buyer’s Feedback
+            </h2>
+            <p class="testimonials__text">
+              Whole front do of plate heard oh ought. His defective nor convinced residence own. Connection has put impossible own apartments boisterous.
+            </p>
+
+            <div class="testimonials__user">
+
+              <picture class="testimonials__user-imageBox">
+                <source srcset='./build/assets/img/user-image.webp' type='image/webp' />
+                <source srcset='./build/assets/img/user-image.avif' type='image/avif' />
+                <img 
+                  src='./build/assets/img/user-image.png' 
+                  type='image/png' 
+                  loading='lazy' 
+                  class="testimonials__user-image"  
+                />
+              </picture>
+
+              <div class="testimonials__user-info">
+                <p class="testimonials__user-name">Saulo Román</p>
+                <p class="testimonials__user-profession">FrontEnd Developer</p>
+                <picture class="testimonials__user-starsBox">
+                  <source srcset='./build/assets/img/stars.webp' type='image/webp' />
+                  <source srcset='./build/assets/img/stars.avif' type='image/avif' />
+                  <img 
+                    src='./build/assets/img/stars.png' 
+                    type='image/png' 
+                    loading='lazy' 
+                    class="testimonials__user-stars"
+                  />
+                </picture>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter section" id="newsletter">
+        <div class="newsletter__container">
+          <div class="newsletter__content">
+            <h2 class="newsletter__title">Subscribe our newsletter</h2>
+            <p class="newsletter__text">Recive latest news, update, and many other things every week.</p>
+
+            <form class="newsletter__form">
+              <input 
+                type="email"
+                placeholder="Enter your email address"
+                required
+              />
+              <button class="newsletter__button">
+                <i class='bx bxs-paper-plane'></i>
+              </button>
+            </form>
+          </div>
+          <picture class="newsletter__imageBox">
+            <source srcset='./build/assets/img/newsletter-image.webp' type='image/webp' />
+            <source srcset='./build/assets/img/newsletter-image.avif' type='image/avif' />
+            <img 
+              src='./build/assets/img/newsletter-image.png' 
+              type='image/png' 
+              loading='lazy' 
+              class="newsletter__image"
+            />
+          </picture>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div class="footer__container section">
+
+        <div class="footer__menu">
+          <h3 class="footer__subtitle">Resources</h3>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Download</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Help Center</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Guide Book</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">App Directory</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu">
+          <h3 class="footer__subtitle">Siboria</h3>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Why Seboria</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Our Collection Process</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Customer Stories</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Instagram Post</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu">
+          <h3 class="footer__subtitle">Company</h3>
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Antiques</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">About Seboria</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Success</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Information</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__menu">
+          <h3 class="footer__subtitle">Get in Touch</h3>
+          <p class="footer__text">Feel free to get in touch with us vai email</p>
+          <a class="footer__email" href="mailto: shakir260@gmail.com">shakir260@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer__navigation">
+        <div class="header__name">Siboria<span>.</span></div>
+
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#home" class="navigation__link">Home</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#products" class="navigation__link">Products</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#categories" class="navigation__link">Categories</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#testimonials" class="navigation__link">Testimonials</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#newsletter" class="navigation__link">NewsLetter</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="footer__social">
+          <i class='bx bxl-facebook' ></i>
+          <i class='bx bxl-instagram-alt' ></i>
+          <i class='bx bxl-twitter' ></i>
+        </div>
+
+      </div>
+
+    </footer>
+
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+  </body>
+
+  <!-- SCROLL REVEAL -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- SWIPER JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+  <!-- APP JS -->
+  <script src="./src/assets/js/app.js"></script>
+
+</html>

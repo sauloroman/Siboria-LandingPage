@@ -1,0 +1,58 @@
+@use 'variables' as v;
+
+@mixin phone {
+  @media ( max-width: v.$phoneSize ) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media ( max-width: v.$tabletSize ) {
+    @content;
+  }
+}
+
+@mixin landscapeTablet {
+  @media ( max-width: v.$landscapeSize ) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media ( max-width: v.$desktopSize ) {
+    @content;
+  }
+}
+
+@mixin grid ( $col, $gap ) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  gap: $gap;
+  place-items: center;
+}
+
+@mixin fullButton ( $color, $textColor ) {
+  background-color: $color;
+  color: $textColor;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: .3s;
+
+  &:hover {
+    background-color: darken($color, 10);
+  }
+}
+
+@mixin disabledButton ( $color ) {
+  background-color: v.$color-white;
+  color: $color;
+  border: 1px solid $color;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  transition: .3s;
+
+  &:hover {
+    background-color: $color;
+    color: v.$color-white;
+  }
+}

@@ -1,0 +1,80 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.newsletter {
+
+  &__container {
+    background-color: v.$color-blue-1;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 8rem 8rem 1rem 8rem;
+
+    @include m.phone {
+      grid-template-columns: 1fr;
+      place-items: center;
+      gap: 3.2rem;
+      padding: 2rem;
+    }
+  }
+
+  &__content { 
+    color: v.$color-white; 
+  }
+
+  &__title {
+    font-size: 3.8rem;
+    font-weight: 600;
+
+    @include m.landscapeTablet {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    margin-bottom: 4.8rem;
+
+    @include m.landscapeTablet {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__form {
+    background-color: v.$color-white;
+    width: 45rem;
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    padding: 1rem;
+    gap: 1.2rem;
+    border-radius: 10px;
+
+    @include m.phone {
+      width: 100%;
+      gap: 0;
+    }
+  }
+
+  &__button {
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: v.$color-orange;
+    color: v.$color-white;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__imageBox {
+    margin-top: -25rem;
+
+    @include m.phone {
+      width: 20%;   
+      margin-top: 0;
+      grid-row: 2 / 3;
+    }
+  }
+
+}
